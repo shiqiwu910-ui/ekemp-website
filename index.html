@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EKEMP provides secure biometric identity terminals, enrollment kits, electronic voting systems and digital identity solutions for governments and enterprises.">
+  <meta name="keywords" content="biometric terminal, biometric enrollment kit, biometric scanner, electronic voting machine, digital identity, e-KYC, ABIS, voter registration">
+  <title>EKEMP | Secure Identity & Biometric Technology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#0b1220; --muted:#64748b; --line:#e5e7eb; --bg:#f7f9fc;
+      --blue:#155eef; --blue2:#0b3fbf; --white:#fff; --dark:#07111f;
+      --radius:24px; --shadow:0 18px 50px rgba(15,23,42,.08);
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+    a{text-decoration:none;color:inherit}.container{width:min(1180px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(229,231,235,.8)}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .logo{font-size:27px;font-weight:800;letter-spacing:-1.5px}.logo span{color:var(--blue)}
+    .menu{display:flex;gap:28px;align-items:center;font-size:14px;font-weight:600}.menu a:hover{color:var(--blue)}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:12px 20px;font-weight:700;font-size:14px}
+    .nav-cta,.btn-primary{background:var(--blue);color:#fff}.btn-secondary{border:1px solid var(--line);background:#fff}
+    .hero{background:radial-gradient(circle at 75% 20%,#dce9ff 0,transparent 35%),linear-gradient(135deg,#f7fbff,#eef4ff);padding:110px 0 95px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+    .eyebrow{color:var(--blue);font-size:13px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase}
+    h1{font-size:clamp(48px,6vw,78px);line-height:1.02;letter-spacing:-4px;margin:18px 0 24px}
+    .hero p{font-size:19px;color:#475569;max-width:640px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+    .hero-art{min-height:460px;border-radius:36px;background:linear-gradient(145deg,#0b1628,#183c77);position:relative;box-shadow:var(--shadow);overflow:hidden}
+    .hero-art:before{content:"";position:absolute;width:360px;height:360px;border-radius:50%;background:#2d6df6;filter:blur(2px);opacity:.32;right:-80px;top:-80px}
+    .device{position:absolute;width:210px;height:310px;background:#101827;border:7px solid #29364a;border-radius:30px;left:50%;top:50%;transform:translate(-50%,-50%) rotate(7deg);box-shadow:0 35px 80px rgba(0,0,0,.4)}
+    .screen{margin:15px;height:205px;border-radius:16px;background:linear-gradient(150deg,#dceaff,#f7fbff);display:flex;align-items:center;justify-content:center;color:#155eef;font-weight:800}
+    .sensor{width:65px;height:65px;border:3px solid #7ea9ff;border-radius:50%;margin:0 auto}
+    section{padding:92px 0}.section-head{max-width:700px;margin-bottom:45px}.section-head h2{font-size:42px;letter-spacing:-2px;line-height:1.1;margin:10px 0 14px}.section-head p{color:var(--muted);font-size:17px}
+    .three{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{border:1px solid var(--line);border-radius:var(--radius);padding:30px;background:#fff;transition:.25s;box-shadow:0 5px 20px rgba(15,23,42,.03)}
+    .card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.icon{width:48px;height:48px;border-radius:14px;background:#eaf1ff;color:var(--blue);display:grid;place-items:center;font-weight:800;margin-bottom:24px}
+    .card h3{margin:0 0 9px;font-size:21px}.card p{margin:0;color:var(--muted);font-size:15px}
+    .dark{background:var(--dark);color:#fff}.dark .section-head p,.dark .card p{color:#9ca9bc}.dark .card{background:#101c2d;border-color:#243249}
+    .product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.product{min-height:330px;border-radius:24px;background:linear-gradient(145deg,#f8fafc,#edf3fb);padding:22px;position:relative;overflow:hidden}
+    .product .mini-device{height:185px;border-radius:18px;background:linear-gradient(145deg,#111827,#334155);margin-bottom:20px;display:grid;place-items:center;color:#fff;font-size:34px;font-weight:800}
+    .product h3{margin:0 0 5px}.product p{margin:0;color:var(--muted);font-size:14px}.tag{display:inline-block;font-size:11px;font-weight:800;color:var(--blue);margin-bottom:8px;text-transform:uppercase}
+    .industry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.industry{padding:28px;border:1px solid var(--line);border-radius:20px;min-height:150px}.industry h3{margin:0 0 8px}.industry p{color:var(--muted);font-size:14px;margin:0}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.stat{padding:30px 0}.stat strong{display:block;font-size:48px;letter-spacing:-2px}.stat span{color:#9ca9bc}
+    .tech{display:grid;grid-template-columns:1fr 1fr;gap:20px}.tech .card{min-height:190px}
+    .resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.resource{border-top:3px solid var(--blue);padding:25px;background:var(--bg);border-radius:0 0 20px 20px}.resource small{color:var(--blue);font-weight:800}.resource h3{font-size:20px}
+    .cta{background:linear-gradient(135deg,#0b3fbf,#155eef);color:#fff;border-radius:32px;padding:55px;display:flex;justify-content:space-between;align-items:center;gap:30px}.cta h2{font-size:40px;line-height:1.1;margin:0 0 12px}.cta p{margin:0;color:#dbe7ff}
+    footer{background:#050b14;color:#c7d1df;padding:60px 0 30px}.footer-grid{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:30px}.footer-title{color:#fff;font-weight:700;margin-bottom:15px}.footer-links a{display:block;color:#91a0b5;font-size:14px;margin:9px 0}.copyright{border-top:1px solid #1c2838;margin-top:45px;padding-top:20px;font-size:13px;color:#718096}
+    .mobile{display:none;border:0;background:none;font-size:25px}.drawer{display:none}
+    @media(max-width:900px){.menu{display:none}.mobile{display:block}.hero-grid,.tech{grid-template-columns:1fr}.three,.industry-grid,.resource-grid{grid-template-columns:1fr 1fr}.product-grid{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}.hero-art{min-height:360px}}
+    @media(max-width:600px){section{padding:65px 0}.three,.industry-grid,.resource-grid,.product-grid,.stats,.footer-grid{grid-template-columns:1fr}h1{letter-spacing:-2px}.section-head h2{font-size:34px}.cta{padding:35px;display:block}.cta .btn{margin-top:22px}.hero{padding:75px 0}.hero-art{min-height:310px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#">E<span>K</span>EMP</a>
+    <nav class="menu">
+      <a href="#solutions">Solutions</a><a href="#industries">Industries</a><a href="#products">Products</a>
+      <a href="#technology">Technology</a><a href="#resources">Resources</a><a href="jokes.html">Fun</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Contact Us</a>
+    <button class="mobile" aria-label="menu" onclick="toggleMenu()">☰</button>
+  </div>
+  <div class="drawer container" id="drawer">
+    <a href="#solutions">Solutions</a><a href="#industries">Industries</a><a href="#products">Products</a>
+    <a href="#technology">Technology</a><a href="#resources">Resources</a><a href="jokes.html">Fun</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Secure Identity Technology</div>
+        <h1>Secure Identity.<br>Anywhere.</h1>
+        <p>Biometric hardware, digital identity technologies and integrated solutions for governments, enterprises and communities.</p>
+        <div class="actions"><a class="btn btn-primary" href="#solutions">Explore Solutions →</a><a class="btn btn-secondary" href="#contact">Talk to an Expert</a></div>
+      </div>
+      <div class="hero-art"><div class="device"><div class="screen"><div><div class="sensor"></div><div style="margin-top:12px">BIOMETRIC</div></div></div></div></div>
+    </div>
+  </section>
+
+  <section id="solutions">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">What we do</div><h2>From identity registration to verification.</h2><p>EKEMP combines biometric devices, identity technologies and software to support secure identity programs at scale.</p></div>
+      <div class="three">
+        <div class="card"><div class="icon">01</div><h3>Build Identity</h3><p>Biometric enrollment terminals and kits for national ID, voter registration and field identity programs.</p></div>
+        <div class="card"><div class="icon">02</div><h3>Verify Identity</h3><p>Fingerprint, face, iris, smart card and document technologies for reliable identity verification.</p></div>
+        <div class="card"><div class="icon">03</div><h3>Manage Identity</h3><p>ABIS, deduplication, e-KYC and identity management capabilities for large-scale deployments.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="industries" class="dark">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">Industries</div><h2>Technology built around real-world identity challenges.</h2><p>Explore solutions by the environment in which identity needs to work.</p></div>
+      <div class="industry-grid">
+        <div class="card"><h3>Government</h3><p>National ID, civil registration, public services and digital identity.</p></div>
+        <div class="card"><h3>Election</h3><p>Voter registration, biometric verification and electronic voting.</p></div>
+        <div class="card"><h3>Banking & Finance</h3><p>e-KYC, customer onboarding and secure authentication.</p></div>
+        <div class="card"><h3>Telecom</h3><p>Subscriber registration and identity verification.</p></div>
+        <div class="card"><h3>Law Enforcement</h3><p>Biometric identification, prisoner management and field operations.</p></div>
+        <div class="card"><h3>Border Control</h3><p>Passport, MRZ and biometric identity verification.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">Products</div><h2>Hardware designed for secure identity.</h2><p>A focused product portfolio covering field enrollment, biometric capture, voting and identity software.</p></div>
+      <div class="product-grid">
+        <article class="product"><div class="mini-device">H5</div><span class="tag">Biometric Terminal</span><h3>H5 Series</h3><p>Portable multi-biometric terminal for identity registration and verification.</p></article>
+        <article class="product"><div class="mini-device">V</div><span class="tag">Enrollment Kit</span><h3>VigoBOX</h3><p>Integrated biometric enrollment solution for mobile and field deployment.</p></article>
+        <article class="product"><div class="mini-device">VOTE</div><span class="tag">Electronic Voting</span><h3>Voting Systems</h3><p>DRE, PCOS and vote-counting technologies for modern elections.</p></article>
+        <article class="product"><div class="mini-device">ABIS</div><span class="tag">Software</span><h3>Identity Software</h3><p>ABIS and identity management capabilities for large-scale biometric programs.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="technology" class="dark">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">Technology</div><h2>The technology behind trusted identity.</h2><p>Build the new site's technical authority around the concepts your customers search for.</p></div>
+      <div class="tech">
+        <div class="card"><h3>Multi-Biometric</h3><p>Fingerprint, facial and iris biometrics, with multimodal capture for different operational requirements.</p></div>
+        <div class="card"><h3>Identity Intelligence</h3><p>ABIS, AFIS, deduplication and identity verification for high-volume identity programs.</p></div>
+        <div class="card"><h3>Security</h3><p>Encryption, PKI, KMS, HSM and secure device architecture for sensitive identity data.</p></div>
+        <div class="card"><h3>Digital Identity</h3><p>e-KYC, DPI, digital ID and identity lifecycle concepts for government and enterprise.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">Proven capability</div><h2>Built for projects that operate at scale.</h2></div>
+      <div class="stats">
+        <div class="stat"><strong>14+</strong><span>Years of experience</span></div>
+        <div class="stat"><strong>800+</strong><span>Customers</span></div>
+        <div class="stat"><strong>60+</strong><span>Patent certificates</span></div>
+        <div class="stat"><strong>500K+</strong><span>Delivery capability</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resources" style="background:#f7f9fc">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">Resources</div><h2>Turn expertise into search visibility.</h2><p>The content center should answer technical questions and lead visitors naturally toward solutions and products.</p></div>
+      <div class="resource-grid">
+        <article class="resource"><small>BIOMETRICS</small><h3>What Is Biometric Deduplication?</h3><p>How biometric systems detect duplicate identities and support one-person-one-identity programs.</p></article>
+        <article class="resource"><small>DIGITAL IDENTITY</small><h3>What Is e-KYC?</h3><p>Understanding electronic identity verification for banking, telecom and public services.</p></article>
+        <article class="resource"><small>ELECTION</small><h3>DRE vs PCOS Voting Machines</h3><p>Key differences between electronic voting and optical-scan vote counting technologies.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="company">
+    <div class="container">
+      <div class="cta" id="contact">
+        <div><h2>Building a secure identity project?</h2><p>Tell us your requirements and our team can help identify the right hardware, software and deployment approach.</p></div>
+        <a class="btn" style="background:#fff;color:#155eef" href="mailto:admin@ekemp.com.cn">Contact EKEMP →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div><div class="logo">E<span>K</span>EMP</div><p style="color:#91a0b5;font-size:14px;max-width:280px">Secure identity and biometric technology for governments and enterprises.</p></div>
+    <div><div class="footer-title">Solutions</div><div class="footer-links"><a href="#solutions">National ID</a><a href="#solutions">e-KYC</a><a href="#solutions">Election</a><a href="#solutions">ABIS</a></div></div>
+    <div><div class="footer-title">Products</div><div class="footer-links"><a href="#products">Biometric Terminals</a><a href="#products">Enrollment Kits</a><a href="#products">Voting</a><a href="#products">Software</a></div></div>
+    <div><div class="footer-title">Technology</div><div class="footer-links"><a href="#technology">Biometrics</a><a href="#technology">Deduplication</a><a href="#technology">Security</a><a href="#technology">Digital Identity</a></div></div>
+    <div><div class="footer-title">Company</div><div class="footer-links"><a href="#company">About EKEMP</a><a href="#resources">Resources</a><a href="#contact">Contact</a></div></div>
+  </div>
+  <div class="container copyright">© 2026 EKEMP. All rights reserved. · <a href="https://github.com/shiqiwu910-ui/ekemp-website" style="color:#91a0b5">View on GitHub</a></div>
+</footer>
+
+<script>
+function toggleMenu(){
+  const d=document.getElementById('drawer');
+  d.style.display=d.style.display==='block'?'none':'block';
+}
+</script>
+</body>
+</html>
